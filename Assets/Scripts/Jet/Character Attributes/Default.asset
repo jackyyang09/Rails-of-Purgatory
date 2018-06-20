@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344c50353693e5b4794263e55d4ca6d8, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: 
+  idleState:
+    idleThreshold: 0
+    walkThreshold: 0.2
+    runThreshold: 0.9
+    deaccel: 0.95
+    rotsPerFrame: 1
+  walkState:
+    idleThreshold: 0.04
+    walkThreshold: 0.2
+    runThreshold: 0.8
+    maxWalkSpeed: 2.68224
+    walkAccel: 1
+  jumpState:
+    initialJumpForce: 19.6
+    jumpForce: 9.8
+    jumpDuration: 0.3
+    jumpTimer: 0
+  fallState:
+    fallSpeed: 9.8
+  runState:
+    idleThreshold: 0.04
+    walkThreshold: 0.2
+    runThreshold: 0.6
+    accel: 2.5
+    turnRate: 1.99
+    maxRunSpeed: 6.7056
+    deaccel: 0.99
+    runSkidWindow: 0
+    runSkidTime: 0
+    breakAngle: 70
+  runSkidState:
+    runSkidSpeed: 0
+    runSkidDecay: 0

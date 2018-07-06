@@ -112,9 +112,15 @@ public class RailLogic : MonoBehaviour {
                     row.segment = i; //row.segment = //...
                     row.tValue = j; //row.tValue = // ...
                     if (i == referenceRailIndex)
+                    {
                         row.sampleValue = Vector3.Lerp(player.transform.position, railReference.GetPosition(i + 1), j);
+                        row.sampleValue.y = player.GetHeightOffset().y + railReference.GetPosition(i).y;
+                    }
                     else
+                    {
                         row.sampleValue = Vector3.Lerp(railReference.GetPosition(i), railReference.GetPosition(i + 1), j);
+                        row.sampleValue.y = player.GetHeightOffset().y + railReference.GetPosition(i).y;
+                    }
                     speedTable.Add(row);
                 }
             }
@@ -131,9 +137,15 @@ public class RailLogic : MonoBehaviour {
                     row.segment = i;
                     row.tValue = j; //row.tValue = // ...
                     if (i == referenceRailIndex)
+                    {
                         row.sampleValue = Vector3.Lerp(player.transform.position, railReference.GetPosition(i), j);
+                        row.sampleValue.y = player.GetHeightOffset().y + railReference.GetPosition(i).y;
+                    }
                     else
+                    {
                         row.sampleValue = Vector3.Lerp(railReference.GetPosition(i + 1), railReference.GetPosition(i), j);
+                        row.sampleValue.y = player.GetHeightOffset().y + railReference.GetPosition(i).y;
+                    }
                     speedTable.Add(row);
                 }
             }
